@@ -20,4 +20,6 @@
    - npm run build
    - npm run watch (u novom tabu - prati izmene na css fajlovima)
 
-# Live demo https://sportizmo.herokuapp.com/search
+# Live demo https://sportizmo.herokuapp.com/home
+
+
