@@ -1,0 +1,87 @@
+[class*='ico-']:before {
+    display: inline-block;
+    font-family: $ikonizmo-font;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class*='icon-']:before {
+    display: inline-block;
+    font-family: 'Glyphter';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.ico-question-01:before {
+    content: '\0043';
+}
+
+.ico-busket-04:before {
+    content: '\0044';
+}
+
+.ico-zoom-01:before {
+    content: '\0048';
+}
+
+.ico-handle-01:before {
+    content: '\0049';
+}
+
+.ico-search-01:before {
+    content: '\0053';
+}
+
+.ico-heart-01:before {
+    content: '\0058';
+}
+
+.ico-heart-02:before {
+    content: '\0059';
+}
+
+.ico-heart-03:before {
+    content: '\005a';
+}
+
+.ico-heart-04:before {
+    content: '\0061';
+}
+
+.ico-arrow-01:before {
+    content: '\0062';
+}
+
+.ico-arrow-02:before {
+    content: '\0063';
+}
+
+.ico-arrow-03:before {
+    content: '\0064';
+}
+
+.ico-arrow-04:before {
+    content: '\0065';
+}
+
+.ico-arrow-05:before {
+    content: '\0066';
+}
+
+.ico-arrow-06:before {
+    content: '\0067';
+}
+
+.ico-star-01:before {
+    content: '\0068';
+}
+
+.icon-home:before {
+    content:'\0041';
+}

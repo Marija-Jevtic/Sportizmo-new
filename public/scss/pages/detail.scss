@@ -1,0 +1,297 @@
+.add-to-cart {
+	div {
+		@include selectWrapper;
+		margin-bottom: em(25px);
+
+		&:after {
+			@include selectArrow;
+		}
+
+		.cart-select {
+			@include selectReset;
+			width: 100%;
+	    	height: em(40px);
+	    	text-indent: 7px;
+	    	font-size: em(13px);
+		}
+	}
+
+	label {
+		@include visuallyhidden;
+	}
+}
+
+.gallery-wrapper,
+.detail-info,
+.desc,
+.payment .delivery {
+    width: 100%;
+}
+
+.gallery-wrapper {
+    position: relative;
+    text-align: center;
+    padding-top: 20px;
+
+    @include respond(desktop) {
+		float: left;
+    	width: 55%;
+    	padding-top: 0;
+	}
+
+    a {
+    	display: block;
+    }
+}
+
+.to-zoom {
+    clear: both;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-wrapper a.main img,
+.gallery-wrapper a.thumb img {
+	width: 100%;
+	height: auto;
+}
+
+.gallery-wrapper a {
+	&.thumb {
+	    float: left;
+	    clear: left;
+	    width: 10%;
+	}
+
+	&.main {
+	    float: right;
+	    clear: right;
+	    width: 89%;
+	}
+}
+
+.desc {
+    padding: 20px 0px;
+
+	@include respond(desktop) {
+		float: left;
+        width: 55%;
+        clear: left;
+	}
+}
+
+.desc-info-wrapp {
+	border-bottom: 1px solid #f1f1f1;
+	padding: 10px 0;
+	overflow: auto;
+}
+
+.value,
+.title {
+	@include fontSize(16px);
+	display: inline-block;
+}
+
+.value {
+	float: right;
+	font-weight: normal;
+
+	span {
+		display: block;
+	}
+}
+
+.desc-info-wrapp .title {
+	font-weight: 700;
+}
+
+.delivery {
+    @include respond(desktop) {
+    	float: left;
+    	width: 45%;
+    }
+
+	.block {
+	    padding: em(20px);
+	    background: #f9f9f9;
+	    border: 3px solid #ccc;
+	    line-height: em(22px);
+
+	    @include respond(desktop) {
+	    	margin: 20px 0px 0px 20px;
+	    }
+	}
+}
+
+.detail-info {
+	@include respond(desktop) {
+        float: left;
+        width: 45%;
+    }
+}
+
+.info-container {
+    margin-top: em(15px);
+
+   	@include respond(desktop) {
+        margin: 0px 0px 0px em(20px);
+    }
+}
+
+.info-container h1 {
+	padding: 0;
+	margin: 0px 0px em(20px) 0px;
+	color: #333;
+	@include fontSize(22px);
+	float: left;
+	line-height: 1.2;
+	width: 60%;
+
+	@include respond(desktop) {
+		@include fontSize(26px);
+	}
+
+	span {
+		font-weight: normal;
+		display: block;
+		margin-top: em(3px);
+	}
+}
+
+.product .price {
+	float: right;
+	font-weight: 500;
+	color: #000;
+	@include fontSize(20px);
+	line-height: 1.2;
+	width: 40%;
+	text-align: right;
+
+	@include respond(desktop) {
+		@include fontSize(26px);
+	}
+}
+
+.add-to-cart {
+    clear: both;
+    margin: 0 0 em(15px) 0;
+}
+
+.add-to-cart .add,
+.pay-button {
+    background: #fdbd04;
+    color: #000;
+    width: 100%;
+    border: none;
+    @include fontSize(16px);
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: em(20px);
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.add-to-fav {
+	 margin: 0 0 em(25px) 0;
+}
+
+.add-to-fav a {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+	    color: #555;
+	}
+
+	.active {
+	    color: #4285F4;
+	}
+
+	span {
+	    margin: 0 0 0 em(4px);
+	}
+}
+
+ul.why-to-buy {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+
+    @include respond(desktop) {
+        width: 60%;
+	}
+
+    li {
+	    margin: 0px 0px em(10px) 0px;
+	    padding: 0;
+	    color: #34a853;
+	    display: flex;
+	    align-items: center;
+
+	    span {
+		    margin: 0px 0px 0px em(4px);
+		    color: #333;
+		}
+	}
+}
+
+.visited {
+	width: 100%;
+	margin-bottom: 50px;
+	display: block;
+	margin-top: 30px;
+}
+
+.visited-link {
+	line-height: rem(28px);
+	padding: 0 em(20px);
+	text-transform: uppercase;
+	color: #333;
+	font-weight: 700;
+}
+
+.article-visited-wrapper {
+	display: flex;
+	margin-top: 20px;
+	flex-wrap: wrap;
+}
+
+.visited-content {
+	max-width: 1020px;
+	margin: 0 auto;
+	width: 100%;
+
+	.article-size-6 {
+		width: 50%;
+		font-size: 11px;
+		text-align: center;
+
+		@include respond(medium-size) {
+			width: 33.33%;
+		}
+
+		@include respond(desktop) {
+			width: 16.66%;
+		}
+	}
+
+	.img-holder {
+		height: 155px;
+		margin: 0 auto;
+	}
+
+	.article-size-6 img {
+		max-width: 150px;
+		width: 100%;
+		height: auto;
+	}
+}

@@ -1,0 +1,66 @@
+.banner a, .banner-02 a {
+    border: 3px solid #fff;
+    padding: em(15px) em(37px);
+    color: #fff;
+    @include fontSize(20px);
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 1;
+
+    @include respond(desktop) {
+        padding: em(18px) em(50px); 
+        @include fontSize(24px);
+    }
+
+    &:hover {
+        background: #fff;
+        color: #000;
+    }
+}
+
+.banner {
+    background: transparent url("../../img/home-sirogojno.jpg") no-repeat scroll top center;
+    height: 714px;
+    position: relative;
+    color: #fff;
+    text-align: center;
+}
+
+.banner .text {
+    position: absolute;
+    top: 42%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+}
+
+.banner .homepage-heading {
+    margin: 0 0 rem(50px) 0;
+    letter-spacing: 1px;
+    line-height: 1.27;
+    @include fontSize(40px);
+}
+
+.banner-02 {
+    background: transparent url("../../img/home-leon.jpg") no-repeat scroll right center;
+    height: 349px;
+    position: relative;
+    color: #fff;
+    text-align: left;
+    margin: 0px 0px -60px 0px;
+}
+
+.banner-02 .text {
+    padding: 30px 0 0 30px;
+    text-align: left;
+}
+
+.banner-02 .homepage-heading {
+    display: block;
+    margin: 0px 0px rem(20px) 0px;
+    @include fontSize(30px);
+    line-height: 1.19;
+}
+
+

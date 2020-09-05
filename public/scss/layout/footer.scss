@@ -1,0 +1,194 @@
+.footer {
+    padding: em(30px) 0px 0px 0px;
+    background: #f1f1f1;
+    color: #999;
+    margin: 60px 20px;
+
+    @include respond(desktop) {
+        max-width: 1008px;
+        margin: 60px auto;
+    }
+}
+
+.footer .info {
+    width: 50%;
+    float: left;
+    margin: 0px 0px 60px 0px;
+    padding: 0 em(10px) 0 em(20px);
+    word-break: break-word;
+
+    @include respond(desktop) {
+        width: 33.33%;
+        float: left;
+        padding: 0 em(20px);
+    }
+
+    img {
+        max-width: 200px;
+        min-height: 90px;
+    }
+}
+
+.info.lang ul li:first-of-type {
+    margin-top: 0.3em;
+}
+
+.info section {
+    margin-left: auto;
+
+    @include respond(desktop) {
+        margin-left: 0;
+    }
+}
+
+.info span {
+    display: block;
+    margin: 0px 0px 10px 0px;
+}
+
+.info ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.info ul li {
+    margin-bottom: em(3px);
+
+    &:first-of-type {
+         margin-bottom: em(10px);
+    }
+
+    a {
+        @include fontSize(13px);
+        font-weight: normal;
+
+        &:hover,
+        .current {
+            color: #777;
+        }
+
+        @include respond(desktop) {
+            @include fontSize(14px);
+        }
+    }
+}
+
+.info ul li.first a {
+    font-weight: bold;
+    @include fontSize(18px);
+    display: inline-block;
+    text-align: left;
+
+    @include respond(desktop) {
+        @include fontSize(20px);
+    }
+}
+
+.info.logo {
+    display: none;
+
+    @include respond(desktop) {
+        display: block;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.partners {
+    clear: both;
+    background: #fff;
+    padding: em(40px) 0px;
+    line-height: 2;
+    overflow: auto;
+    display: flex;
+}
+
+.payment {
+    flex: 1;
+    padding: em(10px) em(20px) em(10px) em(10px);
+
+    a {
+        text-align: right;
+    }
+
+    div {
+        text-align: right;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-bottom: em(10px);
+
+        @include respond(desktop) {
+            margin: 0px 0px 0px 15px;
+            display: inline-block;
+        }
+    }
+}
+
+footer .delivery {
+    flex: 1;
+    border-left: 1px solid #e1e1e1;
+    padding: em(10px) em(10px) em(10px) em(20px);
+
+    img {
+        display: block;
+        margin-bottom: em(10px);
+
+        @include respond(desktop) {
+            display: inline-block;
+        }
+    }
+}
+
+.payment img,
+.delivery img {
+    max-width: 100%;
+    height: auto;
+}
+
+.payment a,
+.delivery a {
+    display: block;
+    font-weight: bold;
+    margin-bottom: em(18px);
+}
+
+.legal {
+    background: #fff;
+    padding: em(20px) 0px em(30px) 0px;
+    text-align: center;
+    border-top: 2px solid #e1e1e1;
+    line-height: 1;
+
+    a {
+        text-transform: uppercase;
+        color: #777;
+        @include fontSize(11px);
+        margin: 15px auto;
+        display: block;
+        margin-bottom: em(18px);
+
+        @include respond(desktop) {
+            text-transform: uppercase;
+            color: #777;
+            @include fontSize(11px);
+            margin: 0px em(10px) 0px em(10px);
+            display: inline;
+        }
+    }
+}
+
+
+
+
+
+
+
+

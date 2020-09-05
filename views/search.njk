@@ -1,0 +1,84 @@
+{% extends "base.njk" %} {% block content %}
+
+{% include "shared/header.njk" %}
+
+{% include "shared/breadcrumb.njk" %}
+
+<h1 class="h1">Converse Koža Patike</h1>
+
+<div class="search-container">
+	{% include "shared/filter.njk" %}
+
+	<div class="main-article-content" role="main">
+		<div class="search-heading">
+
+			<ul class="sort-by-results">
+				<li class="pointer-none">
+					<span>Sortiranje: </span>
+				</li>
+
+				<li class="current">
+					<a href="/search?sort=new">Najnoviji</a>
+				</li>
+
+				<li>
+					<a href="/search?sort=popular">Najpopularniji</a>
+				</li>
+
+				<li>
+					<a href="/search?sort=brand">Brend</a>
+				</li>
+
+				<li>
+					<a href="/search?sort=price">Najjeftiniji</a>
+				</li>
+
+				<li>
+					<a href="/search?sort=Najskuplji">Najskuplji</a>
+				</li>
+
+				<li>Rezultata: <span class="num">186</span>
+				</li>
+			</ul>
+
+			{% include "shared/pagination.njk" %}
+		</div>
+
+		<div class="article-container">
+            <div class="article-wrapper">
+
+				{% set itemsRowSize = 3 %}
+
+				{% set imageSrc = "/img/article/ironi-haljina_443.jpg" %}
+
+				{% set imageSrcset =
+					"/img/article/ironi-haljina_443.jpg 200w,
+					/img/article/ironi-haljina_443.jpg 443w,
+					/img/article/ironi-haljina_627.jpg 627w" %}
+
+
+                {% for result in results %}
+                    {% include "shared/article.njk" %}
+                {% endfor %}
+
+
+				{% set itemsRowSize = 4 %}
+
+				{% set imageSrc = "/img/article/adidas-muske-patike-gazelle-carbon-men_200.jpg" %}
+
+				{% set imageSrcset =
+					"/img/article/adidas-muske-patike-gazelle-carbon-men_200.jpg 200w,
+					/img/article/adidas-muske-patike-gazelle-carbon-men_428.jpg 428w,
+					/img/article/adidas-muske-patike-gazelle-carbon-men_593.jpg 593w" %}
+
+				{% for result in results %}
+				{% include "shared/article.njk" %}
+				{% endfor %}
+            </div>
+        </div>
+
+		{% include "shared/pagination.njk" %}
+	</div>
+</div>
+
+{% endblock %}

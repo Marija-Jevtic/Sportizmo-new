@@ -1,0 +1,118 @@
+.remove {
+    color: #999;
+
+    &:hover {
+        color: #333;
+        cursor: pointer;
+    }
+}
+
+.results {
+    @include clearfix;
+}
+
+.result-wrapper {
+    float: left;
+    width: 50%;
+    text-align: center;
+
+    @include respond(desktop) {
+        width: 25%;
+        line-height: 24px;
+    }
+}
+
+.result-wrapper .title {
+    font-size: 14px;
+    display: block;
+    float: left;
+    width: 70%;
+    text-align: left;
+}
+
+.result-wrapper .price {
+    font-size: 14px;
+    color: $red-color;
+    display: block;
+    float: right;
+    width: 29%;
+}
+
+.result-wrapper .sizes {
+    color: #777;
+    display: block;
+    clear: both;
+    text-align: left;
+}
+
+.result-content {
+    padding: 0px 10px;
+}
+
+.search-heading {
+    padding-top: em(11px);
+
+    @include respond(desktop) {
+        padding-top: em(25px);
+    }
+}
+
+ul.sort-by-results {
+    display: none;
+
+    @include respond(desktop) {
+        border-bottom: 1px #f2f2f2 solid;
+        width: 100%;
+        margin-bottom: em(15px);
+        text-align: center;
+        display: flex;
+        line-height: 1.8;
+        flex-wrap: wrap;
+    }
+
+    li {
+        margin: 0 em(2px);
+        @include fontSize(12px);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: flex;
+        flex: 1 1 auto;
+
+        &:last-of-type {
+            flex: 0 1 25%;
+            justify-content: flex-end;
+        }
+
+        a {
+            flex: 1 1 auto;
+            color: $dark-color;
+
+            &:hover {
+                border-bottom: 1px solid $dark-color;
+            }
+        }
+    }
+}
+
+ul.sort-by-results li.current a {
+    background: #fff;
+    color: $dark-color;
+    font-weight: bold;
+    border-bottom: 1px solid $dark-color;
+}
+
+ul.sort-by-results li.num {
+    color: $red-color;
+    font-weight: bold;
+}
+
+ul.sort-by-results li.pointer-none span {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $gray-color;
+}
+
+
+
+
+

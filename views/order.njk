@@ -1,0 +1,15 @@
+{% extends "base.njk" %} {% block content %}
+
+{% include "shared/header.njk" %}
+
+{% include "shared/breadcrumb.njk" %}
+
+<div class="container">
+	{% include "shared/payment-steps.njk" %}
+
+	<h1 class="center">Naruči</h1>
+
+	{% include "shared/order-form.njk" %}
+</div>
+
+{% endblock %}

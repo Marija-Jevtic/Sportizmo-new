@@ -1,0 +1,28 @@
+{% extends "base.njk" %} {% block content %}
+
+{% include "shared/header.njk" %}
+
+{% include "shared/breadcrumb.njk" %}
+
+<section class="container" role="main">
+	<h1 class="center">Omiljeno</h1>
+
+	<div class="article-container">
+        <div class="article-wrapper">
+			{% set itemsRowSize = 4 %}
+
+			{% set imageSrc = "/img/article/ironi-haljina_200.jpg" %}
+
+				{% set imageSrcset = "/img/article/adidas-muske-patike-gazelle-carbon-men_200.jpg 200w,
+					/img/article/adidas-muske-patike-gazelle-carbon-men_428.jpg 428w,
+					/img/article/adidas-muske-patike-gazelle-carbon-men_593.jpg 593w"
+                %}
+
+			{% for result in results %}
+			{% include "shared/article.njk" %}
+			{% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

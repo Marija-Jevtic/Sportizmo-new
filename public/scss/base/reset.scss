@@ -1,0 +1,56 @@
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.focus-outline-hidden :focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+input,
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+input[type=submit] {
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    font-weight: 500;
+}
+
+img {
+    border-width: 0; /*for ie 10*/
+}
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+

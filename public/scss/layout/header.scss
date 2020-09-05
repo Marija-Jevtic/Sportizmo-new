@@ -1,0 +1,177 @@
+.hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+.logo {
+   margin-left: 2em;
+
+    img {
+        width: 100%;
+        max-width: em(100px);
+        min-height: em(35px);
+
+        @include respond(desktop) {
+            float: none;
+            max-width: em(220px);
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @include respond(desktop) {
+        flex: 1;
+        display: flex;
+        justify-content: left;
+        margin-left: 0;
+    }
+}
+
+.header {
+    padding-top: em(10px);
+    width: 100%;
+    background: #fff;
+    z-index: 9999;
+
+    @include respond(desktop) {
+        padding: 0px;
+    }
+
+    .notice {
+        display: none;
+
+        @include respond(desktop) {
+            display: block;
+            text-align: center;
+            padding: em(5px) 0px em(10px) 0px;
+        }
+    }
+}
+
+.header-content {
+    height: auto;
+    display: flex;
+    position: relative;
+    margin: auto;
+    max-width: 1228px;
+    width: 100%;
+    align-items: flex-end;
+    padding: 0 rem(20px);
+
+    @include respond(desktop) {
+        min-height: em(86px);
+        padding: 0 rem(10px) em(18px) rem(10px);
+    }
+}
+
+ul.desktop_menu {
+    display: none;
+}
+
+ul.user {
+    padding: em(10px) 0px 0px 0px;
+    flex: 1 0 0;
+    display: flex;
+    justify-content: flex-end;
+
+    @include respond(desktop) {
+        align-items: center;
+        flex: 1;
+    }
+}
+
+ul.user li {
+    text-align: center;
+    padding: 0 6px;
+
+    @include respond(desktop) {
+        padding: 0px 10px;
+    }
+
+    &:first-of-type {
+        display: none;
+
+        @include respond(desktop) {
+            display: block;
+        }
+    }
+
+    &:last-of-type {
+        padding: 0 0 0 10px;
+    }
+}
+
+ul.user li a {
+    text-decoration: none;
+    color: #000;
+
+    &:before {
+        @include fontSize(25px);
+
+        @include respond(desktop) {
+            display: block;
+            @include fontSize(20px);
+        }
+    }
+
+    &.added {
+        color: #4285F4;
+
+        sup {
+            float: right;
+        }
+    }
+}
+
+ul.user li span {
+    font-size: em(14px);
+    display: none;
+
+    @include respond(desktop) {
+        display: inline-block;
+        margin-top: 5px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.centered {
+    @include respond(desktop) {
+        margin: auto;
+        min-width: 768px;
+        max-width: 1208px;
+        width: 100%;
+        padding: 0;
+        overflow: hidden;
+    }
+}
+
+ul.desktop_menu {
+    @include respond(desktop) {
+        display: block;
+        float: left;
+        width: 40%;
+        padding: 38px 0px 0px 0px;
+
+        li {
+            float: left;
+            padding: 0px 20px 0px 0px;
+
+            a {
+                @include fontSize(18px);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+.border {
+    @include respond(desktop) {
+        clear: both;
+        height: 1px;
+        background: #c9c9c9;
+    }
+}

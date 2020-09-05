@@ -1,0 +1,98 @@
+{% extends "base.njk" %} {% block content %}
+
+{% include "shared/header.njk" %}
+
+{% include "shared/breadcrumb.njk" %}
+
+<div class="container">
+
+	{% include "shared/payment-steps.njk" %}
+
+	<div class="cart" role="main">
+		<h2 class="empty">Još niste ništa dodali u korpu.</h2>
+
+		<div class="item" role="article">
+			<div class="pic">
+				<a href="/detail" class="title">
+					<img srcset="
+						/img/article/ironi-haljina_200.jpg 200w,
+						/img/article/ironi-haljina_443.jpg 443w,
+	                	/img/article/ironi-haljina_627.jpg 627w,
+	                	/img/article/ironi-haljina_756.jpg 756w"
+	                src="/img/article/ironi-haljina_443.jpg"
+	                sizes="100vw"
+					alt="Woman dress"/>
+				</a>
+			</div>
+
+			<div class="info">
+				<section>
+					<h2>
+						<a href="" class="title">
+							<strong>Sirogojno Sweaters</strong>
+							<span>4947 Handmade</span>
+						</a>
+					</h2>
+
+					<div class="flexed">
+						<div>
+							<span class="title">Cena:</span>
+							<strong class="price">11637 RSD</strong>
+						</div>
+
+						<div>
+							<label for="prodSize" class="title">Veličina</label>
+							<div class="select-wrapper">
+								<select name="prodSize" id="prodSize" class="focus-outline-hidden">
+									<option value="" selected="yes">S</option>
+									<option value="">M</option>
+									<option value="">XL</option>
+									<option value="">L</option>
+								</select>
+							</div>
+						</div>
+
+						<div>
+							<label for="quantity" class="title">Količina:</label>
+							<div class="select-wrapper">
+								<select name="quantity" id="quantity" class="focus-outline-hidden">
+									<option value="" selected="yes">1</option>
+									<option value="">2</option>
+									<option value="">3</option>
+									<option value="">4</option>
+									<option value="">5</option>
+									<option value="">6</option>
+									<option value="">7</option>
+									<option value="">8</option>
+									<option value="">9</option>
+									<option value="">10</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<a href="" class="remove">Izbaci</a>
+				</section>
+			</div>
+		</div>
+
+		<div class="sum">
+			<div class="cell">Isporuka/Izvoz:</div>
+			
+			<div class="cell">
+				<strong>235 RSD</strong>
+			</div>
+			
+			<div class="cell">Ukupna suma:</div>
+			
+			<div class="cell">
+				<strong>23510 RSD</strong>
+			</div>
+			
+			<a class="make-order" href="/order">Naruči</a>
+			
+			<span class="notice">* U narednom koraku ćete uneti svoje lične podatke za isporuku.</span>
+		</div>
+	</div>
+</div>
+
+{% endblock%}

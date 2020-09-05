@@ -1,0 +1,235 @@
+.article-container {
+    @include flex($column);
+    @include full-width;
+
+    .article {
+        padding: 4px;
+
+        @include respond(desktop) {
+            position: relative;
+        }
+
+        .price-wrapper {
+            padding: 0 5px;
+        }
+
+        .price {
+            color: $red-color;
+        }
+
+        a.img-holder {
+            height: auto;
+            display: block;
+            cursor: pointer;
+            margin: 0 1% 0 1%;
+        }
+    }
+
+    .article-wrapper .article {
+        text-align: left;
+
+        @include respond(desktop) {
+            margin: 0;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .more-about {
+            color: $dark-color;
+            font-weight: normal;
+        }
+    }
+
+    .article-wrapper {
+        @include full-width;
+        flex-wrap: $wrap;
+        margin-bottom: em(30px);
+        text-align: center;
+        display: flex;
+
+        .article-size-4,
+        .article-size-3 {
+            @include two-column-article;
+        }
+    }
+
+    .article h2.product-name {
+        @include fontSize(14px);
+        margin: 0;
+        color: $dark-color;
+        font-weight: bold;
+    }
+
+    .article h2.product-name, 
+    .article .more-about {
+        padding: 0 5px;
+    }
+
+
+    .article h2.product-name,
+    .article .more-about {
+        
+        @include respond(desktop) {
+            color: $dark-color;
+        }
+    }
+
+    .article-size-4 img,
+    .article-size-3 img {
+        width: 100%;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .article-wrapper .article-size-4 {
+        .img-holder {
+            max-width: 180px;
+            min-height: 220px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin: 0 auto;
+        }
+
+        @include respond(article-size-3) {
+            width: $three-column-width;
+        }
+    }
+
+    .article-wrapper .article-size-4 {
+         @include respond(article-size-4) {
+            width: $four-column-width;
+        }
+    }
+
+    .article-wrapper .article-size-3 {
+    .img-holder {
+        max-width: 245px;
+        margin: 0 auto;
+        flex-shrink: 0;
+        max-height: 330px;
+
+            @include respond(desktop) {
+                min-height: 330px;
+                display: $flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+            }
+        }
+
+        @include respond(article-size-3) {
+            width: $three-column-width;
+        }
+
+        @include respond(desktop) {
+             width: $three-column-width;
+        }
+    }
+
+    .discount {
+        display: none;
+
+        @include respond(desktop) {
+            display: inline-block;
+            background: $red-color;
+            padding: em(2px) em(9px);
+            color: #fff;
+            position: absolute;
+            top: rem(35px);
+            right: 0;
+            cursor: initial;
+         }
+    }
+
+    .article span.sizes {
+        display: block;
+        color: $gray-color;
+        padding: 0 5px;
+    }
+
+    .article span.close {
+        @include respond(desktop) {
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background: url("../img/izbaci-sprite.png") no-repeat top left;
+            width: rem(18px);
+            height: rem(18px);
+
+            &:hover {
+                background-position: 0 -38px;
+            }
+        }
+    }
+
+    .favourite {
+        @include respond(desktop) {
+            display: block;
+            position: absolute;
+            top: 0%;
+            right: 0px;
+            width: rem(33px);
+            height: rem(33px);
+            font-size: rem(28px);
+            cursor: pointer;
+            transition: font-size 0.2s;
+
+            &.selected,
+            &:hover {
+                font-size: rem(30px);
+                color: $red-color;
+            }
+        }
+
+        &.ico-heart-04 {
+            display: none;
+
+            @include respond(desktop) {
+                display: block;
+            }
+        }
+    }
+}
+
+.article .price-wrapper,
+.article span.sizes, 
+.article h2.product-name, 
+.article .more-about {
+    line-height: rem(24px);
+
+    @include respond(desktop) {
+         line-height: rem(24px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+<form class="order" role="form" action="" method="POST">
+	<div class="input-wrapp">
+		<label for="name">Ime i prezime:</label>
+		<span class="error">Ovo polje je obavezno.</span>
+		<input type="text" name="name" id="name" value="" class="field error"/>
+	</div>
+	
+	<div class="input-wrapp">
+		<label for="email">E-mail:</label>
+		<input type="email" name="email" id="email" value="" class="field"/>
+	</div>
+	
+	<div class="input-wrapp">
+		<label for="telepohone">Telefon:</label>
+		<input type="text" name="telephone" id="telephone" value="+381 " class="field"/>
+	</div>
+	
+	<div class="input-wrapp">
+		<label for="adress">Adresa i poštanski broj:</label>
+		<input type="text" name="adress" id="adress" value="" class="field"/>
+	</div>
+	
+	<div class="input-wrapp">
+		<label for="place">Mesto (<strong>Србија</strong>):</label>
+		<input type="text" name="place" id="place" value="" class="field"/>
+	</div>
+
+	<div class="textarea-wrapp">
+		<label for="message">Komentar:</label>
+		<textarea name="message" id="message" rows="4"></textarea>
+	</div>
+
+	<label for="payment">Metode plaćanja:</label>
+	<div class="select-wrapp">
+		<select class="focus-outline-hidden" name="payment" id="payment">
+			<option value="2">PayPal</option>
+			<option value="3">Bank transfer</option>
+		</select>
+	</div>
+
+	<div class="order-button-wrapp">
+		<label for="order">Naruči</label>
+		<input class="make-order" type="submit" name="order" id="order" value="Naruči"/>
+		<span class="notice">* U narednom koraku možete izvršiti plaćanje prema opciji koju ste odabrali. Plaćanje je 100% sigurno.</span>
+	</div>
+</form>

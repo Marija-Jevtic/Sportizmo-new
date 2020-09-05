@@ -1,0 +1,402 @@
+<div class="filter-wrapper">
+    <div class="filter-box">
+        <label class="filter-label" for="filter" data-count="1" tabindex="0">Filteri</label>
+
+        <div class="sort-select-wrapp">
+            <label for="sort">Sortiranje</label>
+            <select name="sort" id="sort" class="sort-select focus-outline-hidden">
+                <option selected="false" disabled="disabled" hidden>Sortiranje</option>
+                <option value="standardno">Standardno</option>
+                <option value="najjeftiniji">Najjeftiniji</option>
+                <option value="najskuplji">Najskuplji</option>
+            </select>
+        </div>
+    </div>
+
+    <input type="checkbox" id="filter" class="hidden-filter hidden" autocomplete="off">
+
+    <div class="overlay"></div>
+
+    <div class="filter-content">
+        <div class="sticky-filter-heading">
+            <label class="open-close-filter" for="filter"><span>Close filter</span></label>Pretraga
+        </div>
+
+        <div class="filter-division">
+            <button class="filter-heading" data-heading-count="2">Selektovani Filteri</button>
+
+            <div class="clear-selection facet">
+                <a href="/search?type=cipele" class="" title="">Muške</a>
+                <a href="/search?type=muske" title="">Cipele</a>
+                <a href="/search" class="deselect" title="">Poništi</a>
+            </div>
+        </div>
+
+        <div class="filter-division">
+            <button class="filter-heading">Kategorija</button>
+
+            <ul class="no-checkbox facet">
+                <li>
+                    <a href="/search?type=muske" class="current" title="" data-count-category="150">Muške</a>
+                </li>
+
+                <li>
+                    <a href="/search?type=zenske" class="" title="" data-count-category="100">Ženske</a>
+                </li>
+
+                <li>
+                    <a href="/search?type=decije" class="" title="" data-count-category="80">Dečije</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="filter-division">
+            <button class="filter-heading">Kategorija</button>
+
+            <ul class="filter-product-list facet">
+                <li>
+                    <a href="/search?type=muske" class="current" title="">Muške</a>
+                </li>
+
+                <li>
+                    <a href="/search?type=zenske" class="" title="">Ženske</a>
+                </li>
+
+                <li>
+                    <a href="/search?type=decije" class="" title="">Dečije</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="filter-division">
+            <button class="filter-heading">Cena</button>
+
+            <div class="facet">
+                <form class="price-form" action="" method="">
+                    <label for="rangeFrom">od</label>
+                    <div class="select-filter">
+                        <select class="focus-outline-hidden" name="rangeFrom" id="rangeFrom">
+                            <option value="0" disabled="false" selected="selected" hidden>od</option>
+                            <option value="1000">1000</option>
+                            <option value="2000">2000</option>
+                            <option value="3000">3000</option>
+                        </select>
+                    </div>
+
+                    <label for="rangeTo">do</label>
+                    <div class="select-filter">
+                        <select class="focus-outline-hidden" name="rangeTo" id="rangeTo">
+                            <option value="0" disabled="false" selected="selected" hidden>do</option>
+                            <option value="1000">1000</option>
+                            <option value="2000">2000</option>
+                            <option value="3000">3000</option>
+                        </select>
+                    </div>
+                    <button class="ico-search-01 price-form-btn" type="submit">
+                        <span>Submit</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="filter-division">
+            <button class="filter-heading">Sniženje %</button>
+
+            <ul class="filter-product-list facet">
+                <li>
+                    <a href="/search?discount=50" class="current" title=""> 50% +</a>
+                </li>
+
+                <li>
+                    <a href="/search?discount=40" title="">40% +</a>
+                </li>
+
+                <li>
+                    <a href="/search?discount=30" title="">30% +</a>
+                </li>
+
+                <li>
+                    <a href="/search?discount=20" title="">20% +</a>
+                </li>
+
+                <li>
+                    <a href="/search?discount=10" title="">10% +</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="filter-division brends">
+            <button class="filter-heading">Vrsta</button>
+
+            <label for="brends">Search brands</label>
+            <input type="text" name="brends" class="search-brands" id="brends" placeholder="Pretrazi brendove">
+
+            <ul class="filter-product-list facet">
+                <li>
+                    <a href="/search?brand=Nike" class="current" title="">Nike</a>
+                </li>
+
+                <li>
+                    <a href="/search?brand=Adidas" title="">Adidas</a>
+                </li>
+
+                <li>
+                    <a href="/search?brand=Leon" title="">Leon</a>
+                </li>
+
+                <li>
+                    <a href="/search?brand=Asics" title="">Asics</a>
+                </li>
+
+                <li>
+                    <a href="/search?brand=Adidas" title="">Adidas</a>
+                </li>
+
+                <li>
+                    <a href="/search?brand=Leon" title="">Leon</a>
+                </li>
+
+                <li>
+                    <a href="/search?brand=Asics" title="">Asics</a>
+                </li>
+
+                <li>
+                    <a href="/search?brand=Adidas" title="">Adidas</a>
+                </li>
+
+                <li>
+                    <a href="/search?brand=Leon" title="">Leon</a>
+                </li>
+
+                <li>
+                    <a href="/search?brand=Asics" title="">Asics</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="filter-division">
+            <button class="filter-heading" data-heading-count="1">Brojevi</button>
+
+            <div class="facet">
+                <ul class="numbers-filter">
+                    <li>
+                        <a href="/search?number=39">39</a>
+                    </li>
+
+                    <li>
+                        <a href="/search?number=39.5" class="active">39.5</a>
+                    </li>
+
+                    <li>
+                        <a href="/search?number=40">40</a>
+                    </li>
+
+                    <li>
+                        <a href="/search?number=40.5">40.5</a>
+                    </li>
+
+                    <li>
+                        <a href="/search?number=41">41</a>
+                    </li>
+
+                    <li>
+                        <a href="/search?number=41.5">41.5</a>
+                    </li>
+
+                    <li>
+                        <a href="/search?number=42">42</a>
+                    </li>
+
+                    <li>
+                        <a href="/search?number=42.5">42.5</a>
+                    </li>
+
+                    <li>
+                        <a href="/search?number=43">43</a>
+                    </li>
+
+                    <li>
+                        <a href="/search?number=43.5">43.5</a>
+                    </li>
+
+                    <li>
+                        <a href="/search?number=44">44</a>
+                    </li>
+
+                    <li>
+                        <a href="/search?number=44.5">44.5</a>
+                    </li>
+
+                    <li>
+                        <a href="/search?number=45">45</a>
+                    </li>
+
+                    <li>
+                        <a href="/search?number=45.5">45.5</a>
+                    </li>
+
+                    <li>
+                        <a href="/search?number=46">46</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="filter-division">
+            <button class="filter-heading">Boja</button>
+
+            <ul class="color-filter facet">
+                <li>
+                    <a class="bele active" href="/search?color=white" title="Bela boja">Bele</a>
+                </li>
+
+                <li class="crne">
+                    <a href="/search?color=black" title="Crna boja">Crne</a>
+                </li>
+
+                <li class="plave">
+                    <a href="/search?color=blue" title="Plava boja">Plave</a>
+                </li>
+
+                <li class="crvene">
+                    <a href="/search?color=red" title="Crvena boja">Crvene</a>
+                </li>
+
+                <li class="bordo">
+                    <a href="/search?color=maroon" title="Bordo boja">Bordo</a>
+                </li>
+
+                <li class="zelene">
+                    <a href="/search?color=green" title="Zelena boja">Zelene</a>
+                </li>
+
+                <li class="zute" >
+                    <a href="/search?color=yellow" title="Žuta boja">Žute</a>
+                </li>
+
+                <li class="sive">
+                    <a href="/search?color=gray" title="Siva boja">Sive</a>
+                </li>
+
+                <li class="roze">
+                    <a href="/search?color=pink" title="Roze boja">Roze</a>
+                </li>
+
+                <li class="braon">
+                    <a href="/search?color=brown" title="Braon boja">Braon</a>
+                </li>
+
+                <li class="ljubicaste">
+                    <a href="/search?color=purple" title="Ljubičasta boja">Ljubičaste</a>
+                </li>
+
+                <li class="bez">
+                    <a href="/search?color=beige" title="Bež">Bež</a>
+                </li>
+
+                <li class="sarene">
+                    <a href="/search?color=colorful" title="Šarene boje">Šarene</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="filter-division">
+            <button class="filter-heading">Sport</button>
+
+            <ul class="filter-product-list facet">
+                <li>
+                    <a href="/search" class="current" title="">Fudbal</a>
+                </li>
+
+                <li>
+                    <a href="/search" title="">Futsal</a>
+                </li>
+
+                <li>
+                    <a href="/search" title="">Šetanje</a>
+                </li>
+
+                <li>
+                    <a href="/search" title="">Tenis</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="filter-division">
+            <button class="filter-heading">Dubina</button>
+
+            <ul class="filter-product-list facet">
+                <li>
+                    <a href="/search" class="current" title="Plitke">Plitke</a>
+                </li>
+
+                <li>
+                    <a href="/search" title="">Poluduboke</a>
+                </li>
+
+                <li>
+                    <a href="/search" title="">Duboke</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="filter-division">
+            <button class="filter-heading">Materijal</button>
+
+            <ul class="filter-product-list facet">
+                <li>
+                    <a href="/search" class="current" title="Vuna">Vuna</a>
+                </li>
+
+                <li>
+                    <a href="/search" title="">Akril</a>
+                </li>
+
+                <li>
+                    <a href="/search" title="">Tekstil</a>
+                </li>
+
+                <li>
+                    <a href="/search" title="">Lan</a>
+                </li>
+
+                <li>
+                    <a href="/search" title="">Sintetika i tekstil</a>
+                </li>
+
+                <li>
+                    <a href="/search" title="">Koža i tekstil</a>
+                </li>
+
+                <li>
+                    <a href="/search" title="">Koža</a>
+                </li>
+
+                <li>
+                    <a href="/search" title="">Veštačka koža</a>
+                </li>
+
+                <li>
+                    <a href="/search" title="">Viskoza</a>
+                </li>
+
+                <li>
+                    <a href="/search" title="">Veštačka koža i tekstil</a>
+                </li>
+
+                <li>
+                    <a href="/search" title="">Antilop i tekstil</a>
+                </li>
+
+                <li>
+                    <a href="/search" title="">Pamuk</a>
+                </li>
+
+                <li>
+                    <a href="/search" title="">Sintetika</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="overlay"></div>

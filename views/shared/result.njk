@@ -1,0 +1,18 @@
+<article class="result-wrapper">
+	<div class="result-content">
+		<a href="/detail">
+			<img src="{{ imgUrl }}" width="98%" height="auto" />
+		</a>
+
+		<a class="title" href="/detail">
+			<strong>{{ result.marka }} {{ result.kategorija }}</strong>{{ result.model }}
+		</a>
+
+		<strong class="price">{{ result.cena }} RSD</strong>
+		<span class="sizes">XL,L,M,S</span>
+
+		{% if pageType == "favourite" %}
+		<a class="remove">Izbaci</a>
+		{% endif %}
+	</div>
+</article>

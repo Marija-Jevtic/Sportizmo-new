@@ -1,0 +1,113 @@
+.path {
+    list-style: none;
+    margin: 25px 0px 25px 0px;
+    padding: 0;
+    font-size: 0;
+
+    @include respond(desktop) {
+         margin: 0px 0px 25px 0px;
+    }
+}
+
+.path em {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    display: inline-block;
+    font: inherit;
+    width: em(30px);
+    height: em(30px);
+    line-height: 1.8em;
+    border:  2px solid #333333;
+    border-radius: em(20px);
+}
+
+.path li {
+    font-size: rem(12px);
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    margin: em(6px) 0 em(6px) 0;
+
+    &:after,
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 50%;
+        top: em(14px);
+        height: em(3px);
+    }
+}
+
+li.done:after,
+li.current:after,
+li.todo:after {
+    right: 0;
+}
+
+li.current:before,
+li.done:before,
+li.done:after {
+    background-color: #f1f1f1;
+}
+
+li.first-child:before,
+li.current:last-child:after,
+li.todo:last-child:after {
+    background-color: #fff;
+}
+
+li.current em {
+    background-color: #eaf2ff;
+}
+
+li.todo em,
+li.todo strong {
+    border-color: #cccccc;
+    color: #cccccc;
+}
+
+.path strong {
+    display: block;
+    font-size: rem(11px);
+    margin: 5px 0px 0px 0px;
+}
+
+.path.stepsCount_3 li {
+    width: 33.3%;
+}
+
+.path li.current em,
+.path li.current strong {
+    border-color: #4285F4;
+    color: #4285F4;
+}
+
+.path li.done em    ,
+.path li.done strong {
+    border-color: #ccc;
+    color: #ccc;
+}
+
+.path li.current:after,
+.path li.todo:after,
+.path li.todo:before {
+    background-color: #f1f1f1;
+}
+
+.path li.current:last-child:after,
+.path li.todo:last-child:after,
+.path li:first-child:before {
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+

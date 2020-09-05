@@ -1,0 +1,119 @@
+@mixin respond($breakpoint) {
+
+	@if $breakpoint == desktop {
+		$base-font-size: 14px !global;
+		@media screen and (min-width: 975px) { @content };
+	}
+
+	@if $breakpoint == article-size-3  {
+		@media screen and (min-width: 625px) { @content };
+	}
+
+	@if $breakpoint == article-size-4 {
+		@media screen and (min-width: 860px) { @content };
+	}
+
+	@if $breakpoint == medium-size {
+		@media screen and (min-width: 480px) { @content };
+	}
+
+	@if $breakpoint == gte10 {
+		/* https://stackoverflow.com/questions/18907131/detecting-ie11-using-css-capability-feature-detection */
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { @content };
+	}
+}
+
+@mixin clearfix {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@mixin two-column-article {
+	width: 50%;
+    margin-bottom: 25px;
+}
+
+@mixin flex($flex-direction) {
+	display: flex;
+	flex-direction: $flex-direction;
+}
+
+@mixin full-width {
+	width: 100%;
+	height: auto;
+}
+
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@function rem($target-px) {
+  @return ($target-px / $base-font-size) * 1rem;
+}
+
+@function em($target-px, $context: $base-font-size) {
+	@return ($target-px / $context) * 1em;
+}
+
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: rem($size);
+}
+
+@mixin visuallyhidden {
+	border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@mixin selectWrapper {
+	border: 1px solid #333;
+  background: #fff;
+  position: relative;
+}
+
+@mixin selectReset {
+  appearance: none;
+  z-index: 1;
+  background: transparent;
+  border: none;
+  position: relative;
+}
+
+@mixin selectArrow {
+	content: ' \25BE ';
+  position: absolute;
+  top: 0;
+  right: em(8px);
+  line-height: em(40px);
+  font-size: em(13px);
+}
+
+@mixin overlay {
+    background: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+    z-index: 2;
+    transition: opacity 800ms ease;
+}
+
+
+
+
+
+

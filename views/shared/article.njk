@@ -1,0 +1,31 @@
+<article class="article article-size-{{ itemsRowSize }}">
+    <a href="/detail">
+        <div class="img-holder">
+            <img srcset="{{ imageSrcset }}" src="{{ imageSrc }}" alt="Women dress" sizes="100vw">
+        </div>
+
+        <h2 class="product-name">{{ result.marka }} {{ result.kategorija }}</h2>
+        <div class="more-about">{{ result.model }}</div>
+    </a>
+
+    <div class="price-wrapper">
+        <strong class="price">{{ result.cena }}
+            <abbr class="currency red" title="Srpska valuta">din.</abbr>
+        </strong>
+        <s class="old-price">17.190</s>
+    </div>
+
+    {% if pageType !== "detail" %}
+        <span class="sizes">36, 37, 38, 39</span>
+    {% endif %}
+
+    {% if pageType === "favourite" %}
+        <span class="close"></span>
+    {% else %}
+        <span class="favourite ico-heart-04"></span>
+    {% endif %}
+
+    {% if result.popust and pageType !== "detail" %}
+        <strong class="discount">-{{ result.popust}} %</strong>
+    {% endif %}
+</article>

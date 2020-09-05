@@ -1,0 +1,7 @@
+.empty {
+    @include fontSize(26px);
+    text-align: center;
+    margin: rem(20px) 0px;
+    font-weight: normal;
+    line-height: 1;
+}

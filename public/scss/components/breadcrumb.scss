@@ -1,0 +1,55 @@
+.bread-crumbs {
+	display: none;
+	line-height: rem(20px);
+	padding: 15px 20px 15px 20px;
+
+	@include respond(medium-size) {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1108px;
+		max-width: 1108px;
+		width: 100%;
+		margin: 0 auto;
+		font-size: rem(13px);
+	}
+
+	@include respond(desktop) {
+			padding: 15px 10px 15px 10px;
+	}
+
+	li {
+		display: inline;
+		color: $gray-color;
+		letter-spacing: -0.4px;
+
+		&:not(:last-child):after {
+			font-size: rem(11px);
+			content: "\002F";
+			margin: 0 3px 0 3px;
+			cursor: initial;
+			text-decoration: none;
+		}
+
+		&.back-to-search {
+			a {
+				color: $dark-color;
+				text-transform: uppercase;
+			}
+
+			&:after {
+				content: "";
+				margin-right: 5px;
+				color: $dark-color;
+			}
+		}
+	}
+
+	a {
+		cursor: pointer;
+		color: $gray-color;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

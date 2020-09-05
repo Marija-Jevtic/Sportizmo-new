@@ -1,0 +1,116 @@
+.help {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    overflow: auto;
+
+    @include respond(desktop) {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.help li {
+    width: 98%;
+    float: left;
+    margin: 1%;
+    padding: 0;
+
+    @include respond(desktop) {
+        width: 48%;
+        float: left;
+        margin: 1%;
+    }
+
+    a {
+        display: block;
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: em(30px) 0px;
+        font-size: rem(20px);
+        letter-spacing: 1px;
+        font-weight: normal;
+
+        &:hover {
+            background: #fafafa;
+        }
+    }
+}
+
+.row {
+    flex-direction: column;
+
+    @include respond(desktop) {
+        flex-direction: row;
+    }
+}
+
+.pages-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: auto;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 100%;
+
+    @include respond(desktop) {
+        max-width: 300px;
+        width: 100%;
+        margin-top: em(60px);
+        order: 1;
+    }
+}
+
+.pages-menu li {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+
+    a {
+        display: block;
+        text-align: center;
+        padding: em(20px) em(10px);
+        font-size: rem(18px);
+
+        &:hover,
+        &.current {
+            background: #f1f1f1;
+        }
+    }
+}
+
+.pages-text {
+    flex: 1 1 auto;
+    margin-left: 0;
+    font-size: rem(14px);
+    line-height: em(24px);
+    padding-bottom: em(30px);
+    order: 1;
+
+    @include respond(desktop) {
+        margin-left: 50px;
+    }
+}
+
+.pages-text p {
+    margin: 0 0 em(5px) 0;
+}
+
+.pages-text .info-wrapp {
+    margin: 0px 0px em(15px) 0px;
+}
+
+.pages-text ol li {
+    margin-bottom: em(15px);
+}
+
+
+
+

@@ -1,0 +1,15 @@
+<div class="visited">
+    <section class="article-container visited-content">
+        <h4 class="visited-link">Gledali ste ({{ results.length }})</h4>
+        <div class="article-visited-wrapper">
+            {% set itemsRowSize = 6 %}
+
+            {% set imageSrc = "img/article/adidas-muske-patike-gazelle-carbon-men_200.jpg" %}
+            {% set imageSrcset = "/img/article/adidas-muske-patike-gazelle-carbon-men_200.jpg 200w" %}
+
+            {% for result in results %}
+                {% include "shared/article.njk" %}
+            {% endfor %}
+        </div>
+    </section>
+</div>
