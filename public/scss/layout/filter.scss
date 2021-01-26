@@ -68,6 +68,10 @@
         display: none;
         position: relative;
     }
+
+    @include respond(safari) {
+        padding-left: calc(50% - 3em);
+    }
 }
 
 .filter-label {
@@ -169,13 +173,12 @@
     top: 0;
     z-index: 3;
     background: #fff;
-    overflow: scroll;
+    overflow: auto;
 
     @include respond(desktop) {
         height: auto;
         position: static;
         background: #fff;
-        overflow: initial;
     }
 }
 
@@ -463,6 +466,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: em(10px) 0 em(20px) 0;
+    padding: 1px;
 }
 
 .numbers-filter li {

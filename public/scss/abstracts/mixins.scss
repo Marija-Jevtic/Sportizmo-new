@@ -21,6 +21,10 @@
 		/* https://stackoverflow.com/questions/18907131/detecting-ie11-using-css-capability-feature-detection */
 		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { @content };
 	}
+
+  @if $breakpoint == safari {
+    @media not all and (min-resolution:.001dpcm) { @content }; 
+  }
 }
 
 @mixin clearfix {
@@ -101,16 +105,17 @@
 }
 
 @mixin overlay {
-    background: #000;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.6;
-    z-index: 2;
-    transition: opacity 800ms ease;
-}
+  background: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.6;
+  z-index: 2;
+  transition: opacity 800ms ease;
+} 
+
 
 
 

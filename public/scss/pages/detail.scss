@@ -272,7 +272,7 @@ ul.why-to-buy {
 
 	.article-size-6 {
 		width: 50%;
-		font-size: 11px;
+		font-size: em(13px);
 		text-align: center;
 
 		@include respond(medium-size) {
@@ -295,3 +295,4 @@ ul.why-to-buy {
 		height: auto;
 	}
 }
+
